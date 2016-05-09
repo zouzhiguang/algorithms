@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+
+dependencies {
+
+    def log = [api: '1.7.+', impl: '1.+']
+    compile(
+            [group: 'org.slf4j', name: 'slf4j-api', version: log.api],
+            [group: 'org.slf4j', name: 'log4j-over-slf4j', version: log.api],
+            [group: 'org.slf4j', name: 'jcl-over-slf4j', version: log.api],
+            [group: 'ch.qos.logback', name: 'logback-classic', version: log.impl]
+    )
+
+    testCompile(
+            [group: 'org.testng', name: 'testng', version: '6.8', transitive: false],
+            [group: 'org.mockito', name: 'mockito-all', version: '1.10.19']
+    )
+}
