@@ -12,26 +12,26 @@ public abstract class Stack<T> implements Iterable<T>
      *
      * @param item
      */
-    abstract void push(T item);
+    public abstract void push(T item);
 
     /**
      * remove the most recently added item
      *
      * @return
      */
-    abstract T pop();
+    public abstract T pop();
 
     /**
      * is the bag empty?
      *
      * @return
      */
-    abstract boolean isEmpty();
+    public abstract boolean isEmpty();
 
     /**
      * number of items in the bag
      *
      * @return
      */
-    abstract int size();
+    public abstract int size();
 }

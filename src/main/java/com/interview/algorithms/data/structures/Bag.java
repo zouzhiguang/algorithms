@@ -12,19 +12,19 @@ public abstract class Bag<T> implements Iterable<T>
      *
      * @param item
      */
-    abstract void add(T item);
+    public abstract void add(T item);
 
     /**
      * is the bag empty?
      *
      * @return
      */
-    abstract boolean isEmpty();
+    public abstract boolean isEmpty();
 
     /**
      * number of items in the bag
      *
      * @return
      */
-    abstract int size();
+    public abstract int size();
 }

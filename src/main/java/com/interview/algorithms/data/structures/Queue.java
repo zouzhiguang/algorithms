@@ -14,26 +14,26 @@ public abstract class Queue<T> implements Iterable<T>
      *
      * @param t
      */
-    abstract void enqueue(T t);
+    public abstract void enqueue(T t);
 
     /**
      * remove the least recently added item
      *
      * @return
      */
-    abstract T dequeue();
+    public abstract T dequeue();
 
     /**
      * is the bag empty?
      *
      * @return
      */
-    abstract boolean isEmpty();
+    public abstract boolean isEmpty();
 
     /**
      * number of items in the bag
      *
      * @return
      */
-    abstract int size();
+    public abstract int size();
 }

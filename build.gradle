@@ -3,9 +3,11 @@ apply plugin: 'java'
 targetCompatibility = JavaVersion.VERSION_1_8
 sourceCompatibility = JavaVersion.VERSION_1_8
 
+repositories {
+    mavenCentral()
+}
 
 dependencies {
-
     def log = [api: '1.7.+', impl: '1.+']
     compile(
             [group: 'org.slf4j', name: 'slf4j-api', version: log.api],
@@ -19,3 +21,5 @@ dependencies {
             [group: 'org.mockito', name: 'mockito-all', version: '1.10.19']
     )
 }
+
+
