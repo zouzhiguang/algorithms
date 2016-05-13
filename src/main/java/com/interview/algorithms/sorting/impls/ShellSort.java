@@ -6,7 +6,7 @@ import com.interview.algorithms.sorting.Sorting;
  * @author: Vincent
  * @since:1:13 PM, 10/5/16
  */
-public class ShellSort<T extends Comparable> extends Sorting<T> {
+public class ShellSort<T extends Comparable<T>> extends Sorting<T> {
     @Override
     public void sort(T[] values) {
         int length = values.length;

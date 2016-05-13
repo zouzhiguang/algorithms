@@ -11,11 +11,13 @@ import com.google.common.collect.DiscreteDomain;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Range;
 import com.interview.algorithms.princeton.CommonTest;
+import com.interview.algorithms.sorting.impls.BottomUpMergeSort;
 import com.interview.algorithms.sorting.impls.InsertionSort;
 import com.interview.algorithms.sorting.impls.MergeSort;
+import com.interview.algorithms.sorting.impls.QuickSort;
 import com.interview.algorithms.sorting.impls.SelectionSort;
 import com.interview.algorithms.sorting.impls.ShellSort;
-
+import com.interview.algorithms.sorting.impls.ThreeWayQuickSort;
 
 /**
  * @author: Vincent
@@ -49,6 +51,9 @@ public class SortingTest extends CommonTest {
             {"Sorting algorithms, Insertion Sort", new InsertionSort<Integer>()},
             {"Sorting algorithms, Shell Sort with 3-sort", new ShellSort<Integer>()},
             {"Sorting algorithms, Merge Sort", new MergeSort<Integer>()},
+            {"Sorting algorithms, Bottom Up Merge Sort", new BottomUpMergeSort<Integer>()},
+            {"Sorting algorithms, Random Quick Sort", new QuickSort<Integer>()},
+            {"Sorting algorithms, 3-Way Quick Sort", new ThreeWayQuickSort<Integer>()}
         };
     }
 }

@@ -8,9 +8,9 @@ import com.interview.algorithms.sorting.Sorting;
  * @author: Vincent
  * @since:10:20 PM, 10/5/16
  */
-public class MergeSort<T extends Comparable> extends Sorting<T>
+public class MergeSort<T extends Comparable<T>> extends Sorting<T>
 {
-    private T[] cache;
+    protected T[] cache;
     @Override
     public void sort(T[] values)
     {

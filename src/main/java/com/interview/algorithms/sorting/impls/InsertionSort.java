@@ -6,7 +6,7 @@ import com.interview.algorithms.sorting.Sorting;
  * @author: Vincent
  * @since:12:24 PM, 10/5/16
  */
-public class InsertionSort<T extends Comparable> extends Sorting<T> {
+public class InsertionSort<T extends Comparable<T>> extends Sorting<T> {
 
     @Override
     public void sort(T[] values) {
