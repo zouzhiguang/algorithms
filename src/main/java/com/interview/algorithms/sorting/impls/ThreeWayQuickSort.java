@@ -40,7 +40,7 @@ public class ThreeWayQuickSort<T extends Comparable<T>> extends QuickSort<T>
             }
         }
 
-        // sort low ~ lessThan
+        // sort low ~ lessThan -1, start from lessThan and to greaterThan (same with cursor), would be elements equals to pivot.
         sort(values, low, lessThan - 1);
 
         // sort greaterThan ~ high
