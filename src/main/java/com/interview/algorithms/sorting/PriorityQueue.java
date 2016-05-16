@@ -28,4 +28,10 @@ public abstract class PriorityQueue<Key extends Comparable<Key>>
      */
     public abstract int size();
 
+    protected void swap(Key[] values, int indexA, int indexB){
+        Key tmp = values[indexA];
+        values[indexA] = values[indexB];
+        values[indexB] = tmp;
+    }
+
 }
