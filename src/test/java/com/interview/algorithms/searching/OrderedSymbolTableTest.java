@@ -32,10 +32,10 @@ public class OrderedSymbolTableTest extends CommonTest
         // table should be 456, 123, 5, 4, 3, 2, 1
 
 
-//        Assert.assertEquals(table.ceiling(3).intValue(), 4);
-//        Assert.assertEquals(table.floor(4).intValue(), 3);
-        Assert.assertEquals(table.rank(5), 3);
-        Assert.assertEquals(table.select(3).intValue(), 5);
+        Assert.assertEquals(table.ceiling(3).intValue(), 4);
+        Assert.assertEquals(table.floor(4).intValue(), 3);
+        Assert.assertEquals(table.rank(5), 2);
+        Assert.assertEquals(table.select(2).intValue(), 5);
         Assert.assertTrue(table.contains(123));
         Assert.assertFalse(table.contains(345));
 

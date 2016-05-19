@@ -61,21 +61,21 @@ public class BinarySearchTable<Key extends Comparable<Key>, Value> implements Or
     public Key floor(Key key)
     {
         int rank = rank(key);
-        if(rank <= 0){
+        if(rank + 1 >= counter){
             return null;
         }
 
-        if (rank == 1){
-            return keys[0];
-        }
-
-        return keys[index(rank - 1)];
+        return keys[rank + 1];
     }
 
     @Override
     public Key ceiling(Key key)
     {
-        return keys[rank(key)];
+        int rank = rank(key);
+        if(rank < 1){
+            return null;
+        }
+        return keys[rank - 1];
     }
 
     @Override
@@ -90,8 +90,8 @@ public class BinarySearchTable<Key extends Comparable<Key>, Value> implements Or
             int middle = (low + high) / 2;
             int compare = key.compareTo(keys[middle]);
 
-            if(compare > 0) low = middle + 1;
-            else if (compare < 0) high = middle - 1;
+            if(compare < 0) low = middle + 1;
+            else if (compare > 0) high = middle - 1;
             else return middle;
         }
 
@@ -105,7 +105,7 @@ public class BinarySearchTable<Key extends Comparable<Key>, Value> implements Or
             return null;
         }
 
-        return keys[k - 1];
+        return keys[k];
     }
 
     @Override
@@ -135,6 +135,8 @@ public class BinarySearchTable<Key extends Comparable<Key>, Value> implements Or
             values[i - 1] = values[i];
         }
 
+        keys[--counter] = null;
+        values[counter] = null;
         return value;
     }
 
@@ -202,10 +204,13 @@ public class BinarySearchTable<Key extends Comparable<Key>, Value> implements Or
         int rank = rank(key);
         Value value = values[rank];
 
-        for(int i = rank + 1; i < counter; i++){
-            keys[i - 1] = keys[i];
-            values[i - 1] = values[i];
+        for(int i = rank; i + 1 < counter; i++){
+            keys[i] = keys[i + 1];
+            values[i] = values[i + 1];
         }
+
+        keys[--counter] = null;
+        values[counter] = null;
 
         return value;
     }
