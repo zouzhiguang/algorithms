@@ -1,26 +1,29 @@
 package com.interview.algorithms.data.structures.impls;
 
-import com.interview.algorithms.data.structures.Stack;
-
 import java.util.Iterator;
+import com.interview.algorithms.data.structures.Stack;
 
 /**
  * @author: Vincent
  * @since:9:25 PM, 9/5/16
  */
-public class FixedCapacityStack<T> extends Stack<T> {
+public class FixedCapacityStack<T> extends Stack<T>
+{
 
-    protected Object[] values;
+    protected T[] values;
     protected int counter;
 
-    public FixedCapacityStack(int maxCapacity) {
-        values = new Object[maxCapacity];
+    public FixedCapacityStack(int maxCapacity)
+    {
+        values = (T[]) new Object[maxCapacity];
         this.counter = 0;
     }
 
     @Override
-    public void push(T item) {
-        if (counter >= values.length) {
+    public void push(T item)
+    {
+        if (counter >= values.length)
+        {
             throw new IndexOutOfBoundsException("stack is already full");
         }
 
@@ -28,25 +31,44 @@ public class FixedCapacityStack<T> extends Stack<T> {
     }
 
     @Override
-    public T pop() {
-        if (counter <= 0) {
+    public T pop()
+    {
+        if (counter <= 0)
+        {
             return null;
         }
-        return (T) values[--counter];
+        return values[--counter];
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean isEmpty()
+    {
         return counter <= 0;
     }
 
     @Override
-    public int size() {
+    public int size()
+    {
         return counter;
     }
 
     @Override
-    public Iterator<T> iterator() {
-        return null;
+    public Iterator<T> iterator()
+    {
+       return new Iterator<T>()
+       {
+           private int cursor = counter;
+           @Override
+           public boolean hasNext()
+           {
+               return cursor > 0;
+           }
+
+           @Override
+           public T next()
+           {
+               return values[--cursor];
+           }
+       };
     }
 }

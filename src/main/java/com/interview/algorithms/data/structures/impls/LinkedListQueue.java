@@ -1,8 +1,7 @@
 package com.interview.algorithms.data.structures.impls;
 
-import com.interview.algorithms.data.structures.Queue;
-
 import java.util.Iterator;
+import com.interview.algorithms.data.structures.Queue;
 
 /**
  * FIFO queue.
@@ -61,6 +60,20 @@ public class LinkedListQueue<T> extends Queue<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new Iterator<T>(){
+            private Node<T> node = first;
+
+            @Override
+            public boolean hasNext()
+            {
+                return node != null;
+            }
+
+            @Override
+            public T next()
+            {
+                return node.value;
+            }
+        };
     }
 }

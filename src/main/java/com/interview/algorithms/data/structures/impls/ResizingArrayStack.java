@@ -12,7 +12,7 @@ public class ResizingArrayStack<T> extends FixedCapacityStack<T> {
     }
 
     protected void resize(){
-        Object[] copy = new Object[size() * 2];
+        T[] copy = (T[]) new Object[size() * 2];
 
         for(int i = 0; i <= size(); i++){
             copy[i] = values[i];
