@@ -1,7 +1,8 @@
 apply plugin: 'java'
+apply plugin: 'idea'
 
-targetCompatibility = JavaVersion.VERSION_1_8
-sourceCompatibility = JavaVersion.VERSION_1_8
+compileJava.targetCompatibility = JavaVersion.VERSION_1_8
+compileJava.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     mavenCentral()

@@ -35,17 +35,13 @@ public class BinarySearchTable<Key extends Comparable<Key>, Value> implements Or
         values = tmpValues;
     }
 
-    private int index(int n){
-        return n - 1;
-    }
-
     @Override
     public Key min()
     {
         if(counter <= 0){
             return null;
         }
-        return keys[index(counter)];
+        return keys[counter];
     }
 
     @Override
