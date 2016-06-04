@@ -1,4 +1,4 @@
-package com.interview.algorithms.graphs.undirected.impls;
+package com.interview.algorithms.graphs.undirected.search.impls;
 
 import com.interview.algorithms.data.structures.Queue;
 import com.interview.algorithms.data.structures.impls.ResizingArrayQueue;

@@ -4,9 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.google.common.base.Joiner;
-import com.interview.algorithms.graphs.undirected.impls.BFSGraph;
-import com.interview.algorithms.graphs.undirected.impls.DFSGraph;
-import com.interview.algorithms.graphs.undirected.Graph;
+import com.interview.algorithms.graphs.undirected.search.impls.BFSGraph;
+import com.interview.algorithms.graphs.undirected.search.impls.DFSGraph;
+import com.interview.algorithms.graphs.undirected.search.Graph;
 import com.interview.algorithms.princeton.CommonTest;
 
 /**

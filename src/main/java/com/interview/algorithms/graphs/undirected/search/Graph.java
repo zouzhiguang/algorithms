@@ -1,4 +1,4 @@
-package com.interview.algorithms.graphs.undirected;
+package com.interview.algorithms.graphs.undirected.search;
 
 import java.util.Objects;
 import com.interview.algorithms.data.structures.Bag;

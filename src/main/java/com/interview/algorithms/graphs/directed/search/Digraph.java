@@ -1,4 +1,4 @@
-package com.interview.algorithms.graphs.directed;
+package com.interview.algorithms.graphs.directed.search;
 
 import java.util.Objects;
 import com.interview.algorithms.data.structures.Bag;
@@ -54,7 +54,17 @@ public abstract class Digraph
         return adj[v];
     }
 
-    public abstract Digraph reverse();
+    public Digraph reverse(){
+        Digraph rev = newInstance();
+        for (int i = 0; i < V; i++){
+            final int currentV = i;
+            adj(i).forEach( v -> rev.addEdge(v, currentV));
+        }
+
+        return rev;
+    }
+
+    public abstract Digraph newInstance();
 
     public abstract void search(int s);
 
@@ -64,7 +74,9 @@ public abstract class Digraph
      * @param v
      * @return
      */
-    public abstract boolean marked(int v);
+    public boolean marked(int v){
+        return marked[v];
+    }
 
     /**
      * is there a path from the given start point to the vertex V?
@@ -72,20 +84,22 @@ public abstract class Digraph
      * @param v
      * @return
      */
-    public abstract boolean hasPathTo(int v);
+    public boolean hasPathTo(int v){
+        return marked(v);
+    }
 
-    /**
-     * what is the path from given start point to the vertex V?
-     *
-     * @param v
-     * @return
-     */
-    public abstract Iterable<Integer> pathTo(int v);
 
     /**
      * Calculate the connected component.
      */
-    public abstract void caculateCC();
+    public void caculateCC(){
+        for (int i = 0; i < V(); i++){
+            if(!marked(i)){
+                counter ++;
+                search(i);
+            }
+        }
+    }
 
     /**
      * is a and b connected? by using graph search instead of union-find?

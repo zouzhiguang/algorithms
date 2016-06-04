@@ -1,8 +1,8 @@
-package com.interview.algorithms.graphs.undirected.impls;
+package com.interview.algorithms.graphs.undirected.search.impls;
 
 import com.interview.algorithms.data.structures.Stack;
 import com.interview.algorithms.data.structures.impls.ResizingArrayStack;
-import com.interview.algorithms.graphs.undirected.Graph;
+import com.interview.algorithms.graphs.undirected.search.Graph;
 
 public class DFSGraph extends Graph
 {
