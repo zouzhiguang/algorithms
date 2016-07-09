@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    def log = [api: '1.7.+', impl: '1.+']
+    def log = [api: '1.7.21', impl: '1.1.7']
     compile(
             [group: 'org.slf4j', name: 'slf4j-api', version: log.api],
             [group: 'org.slf4j', name: 'log4j-over-slf4j', version: log.api],

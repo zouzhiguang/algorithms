@@ -7,7 +7,8 @@ import com.interview.algorithms.sorting.Sorting;
  * *
  * @since: 5/12/2016.
  */
-public class QuickSort<T extends Comparable<T>> extends Sorting<T>
+public class
+QuickSort<T extends Comparable<T>> extends Sorting<T>
 {
     @Override
     public void sort(T[] values)
