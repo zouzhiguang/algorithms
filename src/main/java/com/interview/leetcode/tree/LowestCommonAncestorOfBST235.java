@@ -11,5 +11,5 @@ package com.interview.leetcode.tree;
  * @since:10:38 PM, 18/7/2016
  */
 public interface LowestCommonAncestorOfBST235 {
-    TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q);
+    TreeNode lowestCommonAncestor(TreeNode<Integer> root, TreeNode<Integer> p, TreeNode<Integer> q);
 }
