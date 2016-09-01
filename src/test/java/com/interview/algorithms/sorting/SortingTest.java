@@ -55,7 +55,8 @@ public class SortingTest extends CommonTest {
             {"Sorting algorithms, Bottom Up Merge Sort", new BottomUpMergeSort<Integer>()},
             {"Sorting algorithms, Random Quick Sort", new QuickSort<Integer>()},
             {"Sorting algorithms, 3-Way Quick Sort", new ThreeWayQuickSort<Integer>()},
-            {"Sorting algorithms, Heap Sort", new HeapSort<Integer>()}
+            {"Sorting algorithms, Heap Sort", new HeapSort<Integer>()},
+            {"Sorting algorithms, QuickSort Sort", new com.interview.crackcode.QuickSort ()}
         };
     }
 }
