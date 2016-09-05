@@ -1,10 +1,9 @@
 package com.interview.algorithms.data.structures.impls;
 
-import com.interview.algorithms.data.structures.Stack;
-
 import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
+import com.interview.algorithms.data.structures.Stack;
 
 /**
  *
@@ -13,7 +12,7 @@ import java.util.function.Consumer;
  * @author: Vincent
  * @since:8:55 PM, 9/5/16
  */
-public class LinkedListStack<T> extends Stack<T> {
+public class LinkedListStack<T extends Comparable<T>> extends Stack<T> {
 
     private Node<T> firstNode;
     private int counter = 0;

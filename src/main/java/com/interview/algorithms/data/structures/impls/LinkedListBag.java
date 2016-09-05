@@ -8,7 +8,7 @@ import com.interview.algorithms.data.structures.Bag;
  * *
  * @since: 6/1/2016.
  */
-public class LinkedListBag<T> extends Bag<T>
+public class LinkedListBag<T extends Comparable<T>> extends Bag<T>
 {
     protected Node<T> root, last;
     protected int counter;

@@ -9,7 +9,7 @@ import com.interview.algorithms.data.structures.Queue;
  * @author: Vincent
  * @since:9:51 PM, 9/5/16
  */
-public class LinkedListQueue<T> extends Queue<T> {
+public class LinkedListQueue<T extends Comparable<T>> extends Queue<T> {
 
     protected Node<T> first, last;
     protected int counter;
