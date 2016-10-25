@@ -44,7 +44,7 @@ public final class QuickSort extends Sorting<Integer>
         QuickSort quickSort = new QuickSort();
         Integer[] test1 = {5, 4, 3, 2, 1};
         Integer[] test2 = {1, 2, 3, 4, 5};
-        Integer[] test3 = {1, 1, 1, 1, 1};
+        Integer[] test3 = {1, 5,1,1,6,4};
         quickSort.sort(test1);
         quickSort.sort(test2);
         quickSort.sort(test3);
