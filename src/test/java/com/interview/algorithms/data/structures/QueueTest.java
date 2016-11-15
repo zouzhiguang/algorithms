@@ -1,19 +1,18 @@
 package com.interview.algorithms.data.structures;
 
-import com.interview.algorithms.data.structures.impls.LinkedListQueue;
-import com.interview.algorithms.data.structures.impls.ResizingArrayQueue;
-import com.interview.algorithms.princeton.CommonTest;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
+import com.interview.algorithms.data.structures.impls.LinkedListQueue;
+import com.interview.algorithms.data.structures.impls.ResizingArrayQueue;
+import com.interview.algorithms.princeton.CommonTest;
 
 /**
  * @author: Vincent
  * @since:10:27 AM, 10/5/16
  */
-public class QueueTest extends CommonTest {
+public class QueueTest extends CommonTest
+{
 
     @Test(dataProvider = "prepareInstance")
     public void testQueue(String description, Queue<String> queue) throws Exception {
@@ -49,7 +48,7 @@ public class QueueTest extends CommonTest {
     protected Object[][] prepareInstance() {
         return new Object[][] {
             {"FIFO Queue, Linked List implementation", new LinkedListQueue<String>()},
-            {"FIFO Queue, Resizing array implementation", new ResizingArrayQueue<String>()}
+            {"FIFO Queue, Resizing array implementation", new ResizingArrayQueue<String>()},
         };
     }
 }
